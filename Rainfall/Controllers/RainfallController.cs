@@ -19,7 +19,7 @@ namespace Rainfall.Controllers
             _api = api;
         }
         [HttpGet("id/{stationId}/readings")]
-        public async Task<ActionResult<Responses>> Get(int stationId, [FromQuery] int? count = 10)
+        public async Task<ActionResult<Responses>> Get(int stationId, [FromQuery] int count = 10)
         {
             try
             {
@@ -32,9 +32,8 @@ namespace Rainfall.Controllers
 )) return BadRequest();
                 }
 
-
-                var result = await _api.GetReadings(stationId, count.Value);
-
+                if (count < 1 || count > 100) return BadRequest();
+                var result = await _api.GetReadings(stationId, count);
                 if (result.items.Count() == 0) return NotFound();
 
                 return new Responses()
