@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Rainfall.Api;
 using Rainfall.Dtos;
+using Rainfall_Api.Helpers;
 using static System.Net.WebRequestMethods;
 
 namespace Rainfall.Controllers
 {
-    [Route("api/[controller]")]
+    // Removed "api" from route to follow the requirement.
+    [Route("[controller]")]
     [ApiController]
     public class RainfallController : ControllerBase
     {
@@ -17,13 +19,21 @@ namespace Rainfall.Controllers
             _api = api;
         }
         [HttpGet("id/{stationId}/readings")]
-        public async Task<ActionResult<Responses>> Get(int stationId, int count = 10)
+        public async Task<ActionResult<Responses>> Get(int stationId, [FromQuery] int? count = 10)
         {
             try
             {
-                if (count < 1 || count > 100) return BadRequest();
+                if (this.HttpContext != null)
+                {
+                    if (!HttpRequestHelper.ValidateQueries(new string[]
+{
+                    "count"
+}, this.HttpContext.Request.Query.Select(y => y.Key).ToArray()
+)) return BadRequest();
+                }
 
-                var result = await _api.GetReadings(stationId, count);
+
+                var result = await _api.GetReadings(stationId, count.Value);
 
                 if (result.items.Count() == 0) return NotFound();
 
