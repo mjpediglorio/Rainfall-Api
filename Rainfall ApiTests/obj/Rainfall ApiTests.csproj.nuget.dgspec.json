@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests\\Rainfall ApiTests.csproj": {}
+    "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests1\\Rainfall ApiTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests\\Rainfall ApiTests.csproj": {
+    "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests1\\Rainfall ApiTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests\\Rainfall ApiTests.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests1\\Rainfall ApiTests.csproj",
         "projectName": "Rainfall ApiTests",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests\\Rainfall ApiTests.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests1\\Rainfall ApiTests.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Test Exam\\Rainfall-Api\\Rainfall ApiTests1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
