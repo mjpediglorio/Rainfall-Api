@@ -28,8 +28,8 @@ namespace Rainfall.Controllers
                     if (!HttpRequestHelper.ValidateQueries(new string[]
 {
                     "count"
-}, this.HttpContext.Request.Query.Select(y => y.Key).ToArray()
-)) return BadRequest();
+                    }, this.HttpContext.Request.Query.Select(y => y.Key).ToArray()
+                    )) return BadRequest();
                 }
 
                 if (count < 1 || count > 100) return BadRequest();
